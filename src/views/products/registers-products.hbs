@@ -1,0 +1,39 @@
+ <main class="container p-5">
+    <div class="row">
+      <div class="col-md-4 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Add products</h5>
+        <form action = "/upload" method="post" enctype="multipart/form-data">
+            
+          <div class="input-group mb-3">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" name="image" id="inputGroupFile02">
+              <label class="custom-file-label" for="inputGroupFile02">Agregar archivo</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            
+            <input type="text" class="form-control" name="title" id="formGroupExampleInput" placeholder="Name">
+          </div>
+          
+          <div class="form-group">
+            
+            <textarea  class="form-control" name="description" id="formGroupExampleInput" placeholder="Description"></textarea>
+          </div>
+         <div class="form-group">
+            
+            <input type="number" class="form-control" name="precio" id="formGroupExampleInput" placeholder="Price">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Upload</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+      </div>
+    </div>
+  </main>
+    

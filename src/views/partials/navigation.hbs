@@ -1,0 +1,67 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+      <a class="navbar-brand" href="/">REPUESTOS AUTODOC</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">About Us</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+  </div>
+  <ul class="navbar-nav ml-auto">
+    {{#if user}}
+    {{#if user.roles}}
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Product
+        <!--
+        {{user.usuario}}
+      -->
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/products/add">Add products</a>
+          <a class="dropdown-item" href="/sale/all">All sale</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/users/logout">Sign off</a>
+        </div>
+    </li>
+    {{else}}
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Product
+        <!--
+        {{user.usuario}}
+      -->
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/notes">All notes</a>
+          <a class="dropdown-item" href="/notes/add">Notes a add</a>
+          <a class="dropdown-item" href="/products/all-products">All products</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/users/logout">Sign off</a>
+        </div>
+    </li>
+    {{/if}}
+    {{else}}
+    <li class="nav-item">
+          <a href="/users/signin" class="nav-link">Loguin</a> 
+       </li>
+       <li class="nav-item">
+          <a href="/users/signup" class="nav-link">Register</a> 
+       </li>
+       {{/if}}
+  </ul>
+  </div>
+</nav>
+

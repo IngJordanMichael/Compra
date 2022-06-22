@@ -1,0 +1,53 @@
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 ">
+        <div class="card">
+          <div class="card-header">
+            To buy
+          </div>
+          <div class="card-body">
+            <form action="/products/newSale" method="post">
+              <div class="form-group">
+                <label for="exampleFormControlInput1">User</label>
+                <input class="form-control" name="user" type="text" value="{{user.usuario}}" placeholder="{{user.usuario}}" readonly>
+              </div>
+
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Costomer</label>
+                <input class="form-control" type="text" name="title" value="{{product.title}}" placeholder="{{product.title}}" readonly>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">Quantity</label>
+                <select class="form-control" name="selectSale" id="exampleFormControlSelect1">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Price</label>
+                <input class="form-control" name="price" type="number" value="{{product.precio}}"
+                  placeholder="{{product.precio}}" readonly>
+              </div>
+
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Total</label>
+                <input class="form-control" type="number" value="{{product.precio}}" name="total" placeholder="{{product.precio}}" readonly>
+              </div>
+
+              <div class="form-group">
+                <button class="btn btn-secondary btn-block">
+                  Account
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
